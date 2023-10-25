@@ -24,7 +24,7 @@ maxfun = num2str(maxfun);
 
 params = struct('initial_mesh_size','* 10','MAX_BB_EVAL', maxfun);
 
-nomadOpt(fun, x0, lb, ub, params);
+[x,fval,hinf,exit_status,nfeval] = nomadOpt(fun, x0, lb, ub, params);
 
 end
 
